@@ -7,4 +7,4 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_02.html#_the_python_standard_library_s_unittest_module
+I am currently at http://www.obeythetestinggoat.com/book/chapter_02.html#_implicit_waits
