@@ -3,7 +3,7 @@ Test-Driven Development with Python
 ===================================
 :Author:
     Harry J.W. Percival
-:Thanks Harry!
+**Thanks Harry!**
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
