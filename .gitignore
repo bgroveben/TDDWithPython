@@ -1,3 +1,6 @@
+# Remove settings file that has BASE_DIR and SECRET_KEY in it
+settings.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
