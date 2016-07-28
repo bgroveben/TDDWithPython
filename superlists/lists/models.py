@@ -1,4 +1,5 @@
 from django.db import models
 
 class Item(models.Model):
-    pass
+    # set up a text field
+    text = models.TextField(default='')
