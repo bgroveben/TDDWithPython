@@ -29,6 +29,10 @@ class HomePageTest(TestCase):
         # Exercise -- the line in the middle actually calls the function under test
         response = home_page(request)
         # Assert -- assertions at the end
+        self.assertEqual(Item.objects.count(), 1)
+        new_item = Item.objects.first()
+        self.assertEqual(new_item.text, 'A new list item')
+
         self.assertIn('A new list item', response.content.decode())
         expected_html = render_to_string(
             'home.html',
@@ -54,4 +58,3 @@ class ItemModelTest(TestCase):
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text, 'The first (ever) list item')
         self.assertEqual(second_saved_item.text, 'Item the second')
-        
