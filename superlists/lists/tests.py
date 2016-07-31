@@ -6,6 +6,7 @@ from django.template.loader import render_to_string
 from lists.views import home_page
 from lists.models import Item
 
+
 class HomePageTest(TestCase):
 
     # Can we resolve the URL for the root of the site ('/') to a particular view function we have made?
@@ -48,15 +49,6 @@ class HomePageTest(TestCase):
         home_page(request)
         self.assertEqual(Item.objects.count(), 0)
 
-    def test_home_page_displays_all_list_items(self):
-        Item.objects.create(text='itemey 1')
-        Item.objects.create(text='itemey 2')
-
-        request = HttpRequest()
-        response = home_page(request)
-
-        self.assertIn('itemey 1', response.content.decode())
-        self.assertIn('itemey 2', response.content.decode())
 
 class ItemModelTest(TestCase):
 
@@ -76,6 +68,7 @@ class ItemModelTest(TestCase):
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text, 'The first (ever) list item')
         self.assertEqual(second_saved_item.text, 'Item the second')
+
 
 class ListViewTest(TestCase):
 
