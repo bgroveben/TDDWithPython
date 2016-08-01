@@ -7,4 +7,4 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_06.html#_adjusting_our_models
+I am currently at http://www.obeythetestinggoat.com/book/chapter_06.html#_each_list_should_have_its_own_url
