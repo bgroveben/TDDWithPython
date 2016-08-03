@@ -19,6 +19,18 @@ from lists import views
 urlpatterns = [
     url(r'^$', views.home_page, name='home'),
     url(r'^lists/new$', 'lists.views.new_list', name='new_list'),
-    url(r'^lists/(.+)/$', 'lists.views.view_list', name='view_list'),
+
+    # url(r'^lists/(.+)/$', 'lists.views.view_list', name='view_list'),
+    # Django has some built-in code to issue a permanent redirect (301) whenever someone asks for a URL which is
+    # almost right, except for a missing slash.
+    # In the above case, /lists/1/add_item/ would be a match for lists/(.+)/, with the (.+) capturing 1/add_item,
+    # which is why test_redirects_to_list_view(self) throws an AssertionError: 301 != 302.
+    # The reason we don't get the expected failure of 404 != 302 is because Django is trying to be helpful by
+    # guessing that we actually wanted the URL with the trailing slash.
+
+    # We can fix that by making our URL pattern explicitly capture only numerical digits by using the
+    # regular expression \d instead
+
+    url(r'^lists/(\d+)/$', views.view_list, name='view_list'),
     # url(r'^admin/', include(admin.site.urls)),
 ]
