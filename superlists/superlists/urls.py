@@ -17,10 +17,14 @@ from django.conf.urls import include, url
 from lists import views
 
 urlpatterns = [
+    # url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.home_page, name='home'),
-    url(r'^lists/new$', 'lists.views.new_list', name='new_list'),
+    url(r'^lists/new$', views.new_list, name='new_list'),
+    url(r'^lists/(\d+)/$', views.view_list, name='view_list'),
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item'),
 
     # url(r'^lists/(.+)/$', 'lists.views.view_list', name='view_list'),
+
     # Django has some built-in code to issue a permanent redirect (301) whenever someone asks for a URL which is
     # almost right, except for a missing slash.
     # In the above case, /lists/1/add_item/ would be a match for lists/(.+)/, with the (.+) capturing 1/add_item,
@@ -30,7 +34,6 @@ urlpatterns = [
 
     # We can fix that by making our URL pattern explicitly capture only numerical digits by using the
     # regular expression \d instead
+    # url(r'^lists/(\d+)/$', views.view_list, name='view_list'),
 
-    url(r'^lists/(\d+)/$', views.view_list, name='view_list'),
-    # url(r'^admin/', include(admin.site.urls)),
 ]
