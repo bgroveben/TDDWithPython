@@ -12,16 +12,11 @@ Class-based views
 Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-
-from django.conf.urls import include, url
-from lists import views as list_views
-from lists import urls as list_urls
-# The reasoning behind the 'import this as that' syntax is because we are aliasing views and urls.
-# This is good practice in the top-level urls.py file because it allows us to import views and urls
-# from multiple apps if needed.
+from django.conf.urls import url
+from lists import views
 
 urlpatterns = [
-    url(r'^$', list_views.home_page, name='home'),
-    url(r'^lists/', include(list_urls)),
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^new$', views.new_list, name='new_list'),
+    url(r'^(\d+)/$', views.view_list, name='view_list'),
+    url(r'^(\d+)/add_item$', views.add_item, name='add_item'),
 ]
