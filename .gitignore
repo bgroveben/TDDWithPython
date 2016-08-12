@@ -1,8 +1,8 @@
 # Remove settings file that has BASE_DIR and SECRET_KEY in it
 settings.py
 
-# Database
-db.sqlite3
+# Database -- I actually want this included for this tutorial
+# db.sqlite3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
