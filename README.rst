@@ -7,5 +7,4 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_08.html#_deploying_our_code_manually
-Simple Nginx Configuration
+I am currently at http://www.obeythetestinggoat.com/book/chapter_08.html#_getting_to_a_production_ready_deployment
