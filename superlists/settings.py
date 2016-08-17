@@ -23,6 +23,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#!!# CODE FOR PRODUCTION SERVER
+# [...]
+# DEBUG = False
+#
+# TEMPLATE_DEBUG = DEBUG
+#
+# ALLOWED_HOSTS = ['benjamingrove-staging.ml']
+# [...]
+#!!#
 
 # Application definition
 
