@@ -84,6 +84,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, '../database/db.sqlite3'),
+        # The above filepath puts the database one directory above the TDDWithPython folder,
+        # so it is not in version control.
     }
 }
 
