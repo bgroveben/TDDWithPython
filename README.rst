@@ -7,7 +7,7 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_11.html#_using_the_form_in_the_other_view
+I am currently at http://www.obeythetestinggoat.com/book/chapter_11.html#_using_the_form_s_own_save_method
 
 
 **When a new version of Firefox breaks Selenium:**
