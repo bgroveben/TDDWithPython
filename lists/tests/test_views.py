@@ -6,8 +6,10 @@ from django.utils.html import escape
 
 from lists.models import Item, List
 from lists.views import home_page
+from lists.forms import ItemForm
 
 class HomePageTest(TestCase):
+
 
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
@@ -21,7 +23,18 @@ class HomePageTest(TestCase):
         self.assertEqual(response.content.decode(), expected_html)
 
 
+    def test_home_page_renders_home_template(self):
+        response = self.client.get('/')
+        self.assertTemplateUsed(response, 'home.html')
+
+
+    def test_home_page_uses_item_form(self):
+        response = self.client.get('/')
+        self.assertIsInstance(response.context['form'], ItemForm)
+
+
 class NewListTest(TestCase):
+
 
     def test_saving_a_POST_request(self):
         self.client.post(
@@ -58,6 +71,7 @@ class NewListTest(TestCase):
 
 
 class ListViewTest(TestCase):
+
 
     def test_uses_list_template(self):
         list_ = List.objects.create()
