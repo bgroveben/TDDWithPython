@@ -7,7 +7,7 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_12.html#_experimenting_with_duplicate_item_validation_at_the_views_layer
+I am currently at http://www.obeythetestinggoat.com/book/chapter_12.html#_a_more_complex_form_to_handle_uniqueness_validation
 
 
 **When a new version of Firefox breaks Selenium:**
