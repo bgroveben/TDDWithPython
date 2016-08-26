@@ -44,3 +44,11 @@ class ListAndItemModelsTest(TestCase):
         # https://docs.djangoproject.com/en/1.8/ref/models/instances/#get-absolute-url
         list_ = List.objects.create()
         self.assertEqual(list_.get_absolute_url(), '/lists/%d/' % (list_.id,))
+
+
+    def test_duplicate_items_are_invalid(self):
+        list_ = List.objects.create()
+        Item.objects.create(list=list_, text='duplicate')
+        with self.assertRaises(ValidationError):
+            item = Item(list=list_, text='duplicate')
+            item.full_clean()
