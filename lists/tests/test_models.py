@@ -64,11 +64,11 @@ class ListAndItemModelsTest(TestCase):
 
     def test_list_ordering(self):
         list1 = List.objects.create()
-        item1 = Item.objects.create(list=list1, text='item1')
-        item2 = Item.objects.create(list=list1, text='item2')
-        item3 = Item.objects.create(list=list1, text='item3')
+        item1 = Item.objects.create(list=list1, text='first')
+        item2 = Item.objects.create(list=list1, text='second')
+        item3 = Item.objects.create(list=list1, text='third')
         self.assertEqual(
-            Item.objects.all(),
+            list(Item.objects.all()),
             [item1, item2, item3]
         )
 
