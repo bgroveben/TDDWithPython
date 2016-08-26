@@ -52,3 +52,11 @@ class ListAndItemModelsTest(TestCase):
         with self.assertRaises(ValidationError):
             item = Item(list=list_, text='duplicate')
             item.full_clean()
+
+
+    def test_CAN_save_same_item_to_different_list(self):
+        list1 = List.objects.create()
+        list2 = List.objects.create()
+        Item.objects.create(list=list1, text='duplicate')
+        item = Item(list=list2, text='duplicate')
+        item.full_clean()  #! This should not raise an error
