@@ -8,6 +8,7 @@ Test-Driven Development with Python
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
 I am currently at http://www.obeythetestinggoat.com/book/chapter_12.html
+    A Little Digression on Queryset Ordering and String Representations
 
 
 **When a new version of Firefox breaks Selenium:**
