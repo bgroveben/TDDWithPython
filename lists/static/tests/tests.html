@@ -27,7 +27,13 @@
 test("smoke test", function() {
   equal($('.has-error').is(':visible'), true);
   $('.has-error').hide();
-  equal($('.has-error').is(':visible'), false)
+  equal($('.has-error').is(':visible'), false);
+});
+/* smoke test2 will fail because the has-error class is still hidden */
+test("smoke test2", function() {
+  equal($('.has-error').is(':visible'), true);
+  $('.has-error').hide();
+  equal($('.has-error').is(':visible'), false);
 });
 
     </script>
