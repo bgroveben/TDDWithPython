@@ -19,20 +19,18 @@
 			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 			  crossorigin="anonymous"></script>
     <script src="qunit.js"></script>
+    <script src="../list.js"></script>
     <script>
 // Commented code below is for JS linters like jslint or jshint -- mmm... we'll see
 /* global $, test, equal */
 
-test("smoke test", function() {
-  equal($('.has-error').is(':visible'), true);
-  $('.has-error').hide();
+test("errors should be hidden on keypress", function() {
+  $('input').trigger('keypress');
   equal($('.has-error').is(':visible'), false);
 });
-/* smoke test2 will fail because the has-error class is still hidden */
-test("smoke test2", function() {
+
+test("errors should not be hidden unless a key is pressed", function(){
   equal($('.has-error').is(':visible'), true);
-  $('.has-error').hide();
-  equal($('.has-error').is(':visible'), false);
 });
 
     </script>
