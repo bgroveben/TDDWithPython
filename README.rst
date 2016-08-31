@@ -9,6 +9,8 @@ The code for this book can be found at http://www.obeythetestinggoat.com/pages/b
 
 I am currently at http://www.obeythetestinggoat.com/book/chapter_13.html
 
+Reverting Our Spiked Code
+
 
 **When a new version of Firefox breaks Selenium:**
 
