@@ -7,7 +7,7 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_15.html#_a_minimal_custom_user_model
+I am currently at http://www.obeythetestinggoat.com/book/chapter_15.html#_a_token_model_to_link_emails_with_a_unique_id
 
 
 **When a new version of Firefox breaks Selenium:**
