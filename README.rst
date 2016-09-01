@@ -7,9 +7,7 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_13.html
-
-Reverting Our Spiked Code
+I am currently at http://www.obeythetestinggoat.com/book/chapter_15.html#_a_minimal_custom_user_model
 
 
 **When a new version of Firefox breaks Selenium:**
