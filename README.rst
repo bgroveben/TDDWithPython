@@ -9,7 +9,7 @@ The code for this book can be found at http://www.obeythetestinggoat.com/pages/b
 
 I am currently at http://www.obeythetestinggoat.com/book/chapter_16.html#_the_python_mock_library
 
-Getting the FT a little farther along
+Start on the login view
 
 
 **When a new version of Firefox breaks Selenium:**
