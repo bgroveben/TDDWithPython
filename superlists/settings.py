@@ -116,11 +116,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
 
-# Enable email (I hope)
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'bgroveben@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
-EMAIL_USE_TLS = True
+# Allow app to send an email containing a link allowing the user to log in
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER=os.environ.get('HOST_USER')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+EMAIL_USE_TLS=True
 
 # Tell Django to send all exceptions to the terminal by default
 LOGGING = {
