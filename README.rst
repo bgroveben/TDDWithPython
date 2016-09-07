@@ -7,9 +7,7 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_16.html#_using_our_auth_backend_in_the_login_view
-
-Using mock.return_value
+I am currently at http://www.obeythetestinggoat.com/book/chapter_16.html#_finishing_off_our_ft_testing_logout
 
 
 **When a new version of Firefox breaks Selenium:**
