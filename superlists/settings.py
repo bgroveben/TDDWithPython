@@ -116,6 +116,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
 
+# Enable email (I hope)
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'bgroveben@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+EMAIL_USE_TLS = True
 
 # Tell Django to send all exceptions to the terminal by default
 LOGGING = {
