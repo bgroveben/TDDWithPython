@@ -7,7 +7,7 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_18.html
+I am currently at http://www.obeythetestinggoat.com/book/chapter_18.html#_the_outside_layer_presentation_and_templates
 
 
 **When a new version of Firefox breaks Selenium:**
