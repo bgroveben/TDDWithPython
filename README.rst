@@ -7,7 +7,7 @@ Test-Driven Development with Python
 
 The code for this book can be found at http://www.obeythetestinggoat.com/pages/book.html#toc
 
-I am currently at http://www.obeythetestinggoat.com/book/chapter_18.html#_another_pass_outside_in
+I am currently at http://www.obeythetestinggoat.com/book/chapter_18.html#_the_next_requirement_from_the_views_layer_new_lists_should_record_owner
 
 
 **When a new version of Firefox breaks Selenium:**
