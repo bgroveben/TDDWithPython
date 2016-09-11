@@ -12,6 +12,13 @@ class User(models.Model):
     USERNAME_FIELD = 'email'
 
 
+    def is_authenticated(self):
+        try:
+            return self.email
+        except User.DoesNotExist:
+            return None
+
+
 class Token(models.Model):
     email = models.EmailField()
     uid = models.CharField(default=uuid.uuid4, max_length=40)

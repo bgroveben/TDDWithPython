@@ -9,6 +9,8 @@ The code for this book can be found at http://www.obeythetestinggoat.com/pages/b
 
 I am currently at http://www.obeythetestinggoat.com/book/chapter_18.html#_moving_down_to_the_model_layer
 
+Final Step: Feeding Through the .name API from the Template
+
 
 **When a new version of Firefox breaks Selenium:**
 

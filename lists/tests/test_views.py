@@ -72,7 +72,7 @@ class NewListTest(TestCase):
 
     def test_list_owner_is_saved_if_user_is_authenticated(self):
         request = HttpRequest()
-        request.user = User.objects.create(email='right@owner.com')
+        request.user = User.objects.create(email='right@user.com')
         request.POST['text'] = 'new list item'
         new_list(request)
         list_ = List.objects.first()

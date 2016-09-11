@@ -1,6 +1,8 @@
 from django.test import TestCase
 from lists.models import Item, List
 from django.core.exceptions import ValidationError
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class ItemModelsTest(TestCase):
 
@@ -65,3 +67,13 @@ class ListModelTest(TestCase):
         # https://docs.djangoproject.com/en/1.8/ref/models/instances/#get-absolute-url
         list_ = List.objects.create()
         self.assertEqual(list_.get_absolute_url(), '/lists/%d/' % (list_.id,))
+
+
+    def test_lists_can_have_owners(self):
+        user = User.objects.create(email='right@owner.com')
+        list_ = List.objects.create(owner=user)
+        self.assertIn(list_, user.list_set.all())
+
+
+    def test_list_owner_is_optional(self):
+        List.objects.create()  ## Should not raise an exception
